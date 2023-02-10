@@ -1,17 +1,38 @@
 var s = "";
-// segitiga mepet tembok kiri done
-for (i = 1; i < 10; i++) {
+
+// segitiga mepet kanan
+for (i = 10; i > 0; i--) {
   for (a = 0; a < i; a++) {
-    s += "*";
+    s += " ";
+  }
+  for (b = 10; b > i; b--) {
+    s += "+";
   }
   s += "\n";
 }
-for (j = 10; j > 0; j--) {
+for (j = 0; j < 10; j++) {
   for (a = 0; a < j; a++) {
-    s += "*";
+    s += " ";
+  }
+  for (c = 10; c > j; c--) {
+    s += "+";
   }
   s += "\n";
 }
+
+// // segitiga mepet tembok kiri done
+// for (i = 1; i < 10; i++) {
+//   for (a = 0; a < i; a++) {
+//     s += "*";
+//   }
+//   s += "\n";
+// }
+// for (j = 10; j > 0; j--) {
+//   for (a = 0; a < j; a++) {
+//     s += "*";
+//   }
+//   s += "\n";
+// }
 
 // Segitiga sama kaki
 // for (i = 0; i <= 10; i++) {
