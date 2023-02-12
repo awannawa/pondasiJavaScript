@@ -1,5 +1,33 @@
 var s = "";
 
+// diamond
+for (i = 10; i > 0; i--) {
+  for (a = 0; a < i; a++) {
+    s += " ";
+  }
+  for (b = 10; b > i; b--) {
+    s += "0";
+  }
+  s += "1";
+  for (c = 10; c > i; c--) {
+    s += "2";
+  }
+  s += "\n";
+}
+for (j = 0; j <= 10; j++) {
+  for (d = 0; d < j; d++) {
+    s += " ";
+  }
+  for (e = 10; e > j; e--) {
+    s += "0";
+  }
+  s += "5";
+  for (f = 10; f > j; f--) {
+    s += "2";
+  }
+  s += "\n";
+}
+
 // // segitiga mepet kanan
 // for (i = 10; i > 0; i--) {
 //   for (a = 0; a < i; a++) {
