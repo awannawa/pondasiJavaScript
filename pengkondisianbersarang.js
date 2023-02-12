@@ -1,38 +1,11 @@
-function segitigaPascal(n) {
-  var segitiga = [];
-  for (var i = 0; i < n; i++) {
+// segitiga pascal pertambahan segitiga
+function munculkanSegitigaPascal(n) {
+  let segitiga = [];
+  for (let i = 0; i < n; i++) {
     segitiga[i] = [];
-    for (var j = 0; j <= i; j++) {
+    for (let j = 0; j <= i; j++) {
       if (j === 0 || j === i) {
-        function segitigaPascal(n) {
-          var segitiga = [];
-          for (var i = 0; i < n; i++) {
-            segitiga[i] = [];
-            for (let j = 0; j <= i; j++) {
-              if (j === 0 || j === i) {
-                segitiga[i][j] = 1;
-              } else {
-                segitiga[i][j] = segitiga[i - 1][j - 1] + segitiga[i - 1][j];
-              }
-            }
-          }
-          return segitiga;
-        }
-
-        function cetakSegitigaPascal(n) {
-          var segitiga = segitigaPascal(n);
-          for (var i = 0; i < n; i++) {
-            var baris = "";
-            for (var j = 0; j <= i; j++) {
-              baris += segitiga[i][j] + " ";
-            }
-            console.log(baris);
-          }
-        }
-
-        // cetak 10 baris segitiga pascal
-        cetakSegitigaPascal(5);
-        [i][j] = 1;
+        segitiga[i][j] = 1;
       } else {
         segitiga[i][j] = segitiga[i - 1][j - 1] + segitiga[i - 1][j];
       }
@@ -41,19 +14,22 @@ function segitigaPascal(n) {
   return segitiga;
 }
 
-function printPascalTriangle(n) {
-  let segitiga = generatePascalTriangle(n);
-  for (var i = 0; i < n; i++) {
-    var baris = "";
-    for (var j = 0; j <= i; j++) {
+function cetakSegitigaPascal(n) {
+  let segitiga = munculkanSegitigaPascal(n);
+  for (let i = 0; i < n; i++) {
+    let baris = "";
+    for (let a = 5; a > i; a--) {
+      baris += " ";
+    }
+    for (let j = 0; j <= i; j++) {
       baris += segitiga[i][j] + " ";
     }
     console.log(baris);
   }
 }
 
-// cetak segitiga pascal sebanyak 1x
-segitigaPascal(1);
+// contoh penggunaan
+cetakSegitigaPascal(5);
 
 // var s = "";
 
