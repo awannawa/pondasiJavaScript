@@ -30,6 +30,7 @@ console.log(`computer memilih : ${k}`);
 while (bermain) {
   const nyawa = 3;
   let i = nyawa;
+  // muculkan prompt angka tebakan user bila salah 1x kesempatan hilang satu dan dimunculkan pemberitahuan apakah angka yang dimasukkan user terlalu besar atau kecil dst... selama 3x kesempatan...
   for (i; i > 0; i--) {
     const p = parseInt(
       prompt(
@@ -43,29 +44,24 @@ while (bermain) {
       break;
     } else if (p < k) {
       if (j == 0) {
+        // bila angka tertebak maka keluar dari loop
         alert("Mati");
-        break;
       } else {
         alert(`Terlalu rendah\nKamu masih memiliki nyawa ${j}`);
       }
     } else if (p > k) {
       if (j == 0) {
+        // bila angka tertebak maka keluar dari loop
         alert("Mati");
-        break;
       } else {
         alert(`Terlalu tinggi\nKamu masih memiliki nyawa ${j}`);
       }
     }
   }
+  // munculkan confirm pop up apakah mau main tebak angka lagi
   bermain = confirm(
     "Apakah Anda mau bermain tebak angka lagi dengan komputer?"
   );
 }
 
 alert("Terima kasih");
-
-// muculkan prompt angka tebakan user bila salah 1x kesempatan hilang satu dan dimunculkan pemberitahuan apakah angka yang dimasukkan user terlalu besar atau kecil dst... selama 3x kesempatan...
-
-// bila angka tertebak maka keluar dari loop
-
-// munculkan confirm pop up apakah mau main tebak angka lagi
